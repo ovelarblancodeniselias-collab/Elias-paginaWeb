@@ -1,0 +1,1252 @@
+/*---------------------------------Para todo el contenido---------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Barlow', sans-serif;
+    background: rgb(17, 20, 25);
+    color: rgb(255, 255, 255);
+}
+/*---------------------------------WhatsApp--------------------------------------*/
+.whatsapp{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 5;
+    background-color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    letter-spacing: 1.5px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgb(255, 166, 0);
+    transition: transform 0.3s;
+}
+.whatsapp img{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+.whatsapp a{
+    display: flex;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    align-items: center;
+}
+.whatsapp:hover{
+    transform: scale(1.1);
+}
+/*---------------------------------Para el Scroll----------------------------------*/
+/*--Tamaño del scroll--*/
+::-webkit-scrollbar{
+    width: 8px;
+}
+/*--Fondo del scroll--*/
+::-webkit-scrollbar-track{
+    background: rgb(0, 0, 0);
+}
+/*--Color del scroll*/
+::-webkit-scrollbar-thumb{
+    background: rgb(255, 166, 0);
+    border-radius: 3px;
+}
+/*-----------------------------Animacion de entrada-------------------------*/
+/*--Aparece suavemente--*/
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+/*--Desplazamiento hacia arriba--*/
+@keyframes fadeUp{
+    from{opacity: 0; transform: translateY(30px);}
+    to{opacity: 1; transform: translateY(0);}
+}
+/*-----------------------------Header---------------------------------------*/
+/*--Contenedor de los enlaces y logo*/
+nav{
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem 3rem;
+    background-color: rgba(17, 20, 25, 0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 166, 0, 0.3);
+}
+/*--Contenedor del logo y nombre--*/
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(255, 166, 0);
+    text-decoration: none;
+}
+/*--Icono del logo--*/
+.logo img{
+    width: 35px;
+    height: 35px;
+}
+/*--Nombre del logo--*/
+.logo p{
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    padding-top: 2px;
+}
+/*--Contenedor de enlaces y boton inscribirse--*/
+.nav-links, .inscribirse{
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+/*--Enlaces--*/
+.nav-links a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+/*--Animacion de los enlaces--*/
+.nav-links a:hover, .nav-links a.active{
+    color: rgb(255, 166, 0);
+}
+/*--Boton inscribirse--*/
+.inscribirse{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 166, 0);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.4s ease, background 0.3s ease;
+}
+/*--Animacion del boton inscribirse--*/
+.inscribirse:hover{
+    transform: scale(1.1);
+    background-color: rgb(255, 193, 77);    
+}
+/*--Boton modo-oscuro/claro--*/
+.modo{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+/*--Icono del boton modo-oscuro/claro--*/
+.modo img{
+    width: 45px;
+    height: 45px;
+    right: 0;
+    transition: transform 0.3s ease;
+}
+/*--Animacion del boton modo-oscuro/claro--*/
+.modo img:hover{
+    transform: scale(1.1);
+}
+/*-----------------------------Para todas las secciones-----------------------------*/
+/*--Linea divisoria, espacio interno y posicion de las secciones--*/
+section{
+    border-bottom: 0.8px solid rgba(255, 166, 0, 0.5);
+    padding: 4rem 4rem;
+    position: relative;
+}
+/*--Degradado izquierdo y derecho de las secciones--*/
+section::before, section::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    pointer-events: none;
+}
+/*--Color del degradado izquierdo--*/
+section::before{
+    left: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), transparent);
+}
+/*--Color del degradado derecho--*/
+section::after{
+    right: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0.7), transparent);
+}
+/*-----------------------------Seccion Inicio-----------------------------*/
+/*--Contenedor de la imagen y descripciones--*/
+.imagen-fondo{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    animation: fadeUp 0.9s ease 0.1s both;
+}
+/*--Imagen principal--*/
+.imagen-fondo img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+/*--Sombreado izquierdo y derecho de la imagen--*/
+.imagen-fondo::before{
+    content: "";
+    position: absolute;
+    border-radius: 30px;
+    inset: 0;
+    background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.7) 0%,
+    transparent 35%,
+    transparent 65%,
+    rgba(0,0,0,0.7) 100%
+    );
+    pointer-events: none;
+}
+/*--Contenedor de la imagen y titulos--*/
+.contenido-superpuesto {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 8%;
+    gap: 1rem;
+}
+/*--Titulo izquierdo "MEJOR CENTRO FITNESS"--*/
+.titulo-izquierdo{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    letter-spacing: 0.4px;
+    margin-left: -20px;
+    text-shadow:
+    2px 2px 4px rgba(0,0,0,0.7),
+   -2px 2px 4px rgba(0,0,0,0.7),
+    2px -2px 4px rgba(0,0,0,0.7),
+   -2px -2px 4px rgba(0,0,0,0.7);
+    animation: fadeUp 0.9s ease 0.1s both;
+}
+/*--Sub titulo izquierdo--*/
+.sub-titulo-izquierdo{
+    color: rgb(255, 166, 0);
+    width: 300px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    letter-spacing: 0.5px;
+    text-shadow: 
+    2px 2px 3px rgba(0,0,0,0.7),
+   -2px 2px 3px rgba(0,0,0,0.7),
+    2px -2px 3px rgba(0,0,0,0.7),
+   -2px -2px 3px rgba(0,0,0,0.7);
+    animation: fadeUp 0.9s ease 0.1s both;
+}
+/*--Sub titulo "¿Interesado? ¡Únete ahora!"--*/
+.sub-titulo-izquierdo-2{
+    color: rgb(255, 166, 0);
+    width: 300px;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-shadow: 
+    2px 2px 3px rgba(0,0,0,0.7),
+   -2px 2px 3px rgba(0,0,0,0.7),
+    2px -2px 3px rgba(0,0,0,0.7),
+   -2px -2px 3px rgba(0,0,0,0.7);
+    animation: fadeUp 0.9s ease 0.1s both;
+}
+/*--Contenedor de los botones--*/
+.botones{
+    margin-top: 40px;
+    gap: 1rem;
+    display: flex;
+    animation: fadeUp 0.9s ease 0.1s both;
+}
+/*--Boton Unete--*/
+.btn-unete{
+    background-color: rgb(255, 166, 0);
+    border-radius: 8px;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 0.97rem;;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.4s ease;
+}
+/*--Boton Saber mas--*/
+.btn-saberMas{
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 0.97rem;;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, background 0.03s ease, border 0.3s ease;
+}
+/*--Animacion del boton Unete--*/
+.btn-unete:hover{
+    border: 2px solid rgb(0, 0, 0);
+    transform: translateY(-3px);
+    background-color: rgb(255, 193, 77);
+}
+/*--Animacion del boton Saber mas--*/
+.btn-saberMas:hover{
+    border: 2px solid rgb(0, 0, 0);
+    transform: translateY(-3px);
+    background-color: rgb(214, 214, 214);
+}
+/*-----------------------------Seccion Programas-----------------------------*/
+/*--Titulo "Nuestros Programas"--*/
+.titulo-programa{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+/*--Titulo "Construye un cuerpo increible"--*/
+.parrafo-programa{
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.7rem;
+    color: rgb(255, 166, 0);
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+/*--Contenedores de los programas(tarjeteros)--*/
+.programas-grid-1, .programas-grid-2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 3rem;
+}
+/*--Contenedor del la primera fila del programa--*/
+.programas-grid-1{
+    padding-bottom: 50px;
+}
+/*--Tarjetas de los programas--*/
+.programa-tarjeta{
+    position: relative;
+    border: 3px solid transparent;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 250px;
+    height: 420px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    overflow: hidden;
+    background-clip: padding-box;
+    background-color: rgb(255, 255, 255);
+    transition: border 0.3s ease;
+}
+/*--Animacion de las tarjetas--*/
+.programa-tarjeta:hover{
+    border: 3px solid rgb(255, 166, 0);
+}
+/*--Imagen dentro de las tarjetas--*/
+.programa-imagen img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+/*--Contenedor del titulo y la descripcion de las tarjetas--*/
+.titulo-descripcion{
+    position: absolute;
+    top: 41%;
+}
+/*--Titulo de las tarjetas--*/
+.programa-titulo{
+    background-color: rgb(255, 166, 0);
+    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+/*--Descripcion de las tarjetas--*/
+.programa-descripcion{
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+    text-shadow: 0 0 1px rgb(0, 0, 0);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: rgb(26, 26, 26);
+}
+/*-----------------------------Seccion Preguntas-----------------------------*/
+/*--Contenedor de la galeria de imagen y preguntas--*/
+.seccion-preguntas{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin: 0 auto;
+}
+/*--Titulo "Sobre nosotros"--*/
+.titulo-preguntas{
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+/*--Titulo "¿Por qué unirte?"--*/
+.parrafo-preguntas{
+    text-align: left;
+    margin-bottom: 1.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.7rem;
+    color: rgb(255, 166, 0);
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+/*--Contenedor de la galeria de imagenes--*/
+.imagenes{
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+/*--Imagenes de la galeria--*/
+.imagen{
+    border-radius: 16px;
+    overflow: hidden;
+    height: 220px;
+    border: 1px solid rgb(255, 166, 0);
+}
+/*--Estilo de la primera imagen hija de la galeria--*/
+.imagen:first-child{
+    grid-column: 1 / -1;
+    height: 240px;
+}
+/*--Estilos de las imagenes de la galeria--*/
+.imagen img{
+    width: 100%;
+    height: 100%;
+    -object-fit: cover;
+}
+/*--Contenedor de las preguntas--*/
+.preguntas{
+    z-index: 1;
+}
+/*--Estilo para todas las preguntas--*/
+.preguntas-listas{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+/*--Contenedor de los detalles de las preguntas--*/
+details.item{
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: border-color 0.3s;
+    cursor: pointer;
+}
+/*--Animacion de los detalles de las preguntas--*/
+details.item:hover{
+    border-color: rgb(255, 166, 0);
+}
+/*--Estilo de los detalles de las preguntas al abrir--*/
+details[open].item{
+    border-color: rgb(255, 166, 0);
+}
+/*--Contenedor del icono y titulo de las preguntas--*/
+details.item summary{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+/*--Oculta los detalles de las preguntas--*/
+details.item summary::-webkit-details-marker{
+    display: none;
+}
+/*--Estilo del caracter "+" y "-"--*/
+details.item summary::after{
+    content: "+";
+    margin-left: auto;
+    color: rgb(255, 166, 0);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+/*--Cambia de "+" a "-" al abrir--*/
+details[open].item summary::after{
+    content: "-";
+}
+/*--Icono de las preguntas--*/
+.item-icono img{
+    width: 32px; 
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+/*--Detalles de las preguntas--*/
+.pregunta-detalles{
+    padding: 10px;
+    color: rgb(255, 166, 0);
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+/*-----------------------------Seccion Precios-----------------------------*/
+/*--Titulo "Precios"--*/
+.titulo-precios{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+/*--Titulo "Nuestros planes especiales"--*/
+.parrafo-precios{
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.7rem;
+    color: rgb(255, 166, 0);
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+/*--Contenedor de los tarjeteros--*/
+.planes-grid{
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+/*--Contenedor de cada tarjetero--*/
+.plan-tarjeta{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgb(255, 166, 0);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s, background 0.3s ease;
+}
+/*--Animacion de los tarjeteros--*/
+.plan-tarjeta:hover{
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+/*--Tipo de plan--*/
+.plan-tipo{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
+}
+/*--Precio del plan--*/
+.plan-precio{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: rgb(255, 166, 0);
+    margin-bottom: 1.5rem;
+}
+/*--Estilo del span dentro precio del plan--*/
+.plan-precio span{
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.1rem;
+}
+/*--Contenedor de las caracteristicas del plan--*/
+.plan-caracteristicas{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+/*--Caracteristicas del plan--*/
+.plan-caracteristica{
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    gap: 0.5rem;
+}
+/*Boton de inscribirse dentro del tarjetero--*/
+.plan-btn{
+    position: absolute;
+    width: 80%;
+    padding: 10px;
+    background-color: rgb(255, 166, 0);
+    border-radius: 20px;
+    font-size: 1rem;
+    bottom: 2%;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: rgb(0, 0, 0);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+/*--Animacion del boton dentro del tarjetero--*/
+.plan-btn:hover{
+    transform: scale(1.1);
+    background-color: rgb(255, 193, 77);
+}
+/*-----------------------------Seccion Contacto-----------------------------*/
+/*--Contenedor de imagen y elementos--*/
+.seccion-contacto{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+/*--Contenedor de imagen--*/
+.contacto-img{
+    z-index: 1;
+    border-radius: 20px;
+    height: 360px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+/*--Imagen--*/
+.contacto-img img{
+    width: 100%;
+}
+/*--Titulo "Contacto"--*/
+.titulo-contacto{
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+/*--Contenedor de todos los elementos de contacto--*/
+.contacto-contenedor{
+    z-index: 1;
+}
+/*--Titulo "¿Tienes alguna pregunta?"--*/
+.parrafo-contacto{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: rgb(255, 166, 0);
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+/*--Descripcion breve--*/
+.descripcion-contacto{
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+/*Espacio externo de cada apartado--*/
+.nombre, .correo, .opcionesPlan, .mensaje{
+    margin-bottom: 25px;
+}
+/*--Estilo de los titulos--*/
+.nombreUsuario, .correoUsuario, .planUsuario, .titulo-combo, .mensajeUsuario{
+    color: rgb(255, 166, 0);
+}
+/*--Estilo para todos los label--*/
+form label{
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+/*--Estilo de entrada de datos--*/
+.nombre input, .correo input{
+    width: 80%;
+    height: auto;
+    font-size: 0.9rem;
+    padding: 5px;
+    display: flex;
+    background-color: rgba(131, 131, 131, 0.2);
+    color: rgb(255, 255, 255);
+    font-family: 'Bebas Neue', sans-serif;
+}
+/*--Estilo de los RadioButtons--*/
+.grupo-radios{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/*Contenedor del boton "Ver plan"--*/
+.contenedor-boton-ver-plan{
+    border-top: 1px solid rgb(255, 166, 0);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*--Boton Ver plan--*/
+.boton-ver-plan{
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+/*--Animacion del boton Ver plan--*/
+.boton-ver-plan:hover{
+    transform: scale(1.1);
+}
+/*Estilos del ComboBox--*/
+.opciones-combo{
+    margin-bottom: 20px;
+    width: 50%;
+    font-size: 0.9rem;
+    padding: 5px;
+    background-color: rgba(131, 131, 131, 0.2);
+    color: rgb(255, 255, 255);
+    font-family: 'Bebas Neue', sans-serif;
+}
+/*--Estilo de las opciones del ComboBox--*/
+.opciones-combo option{
+    color: black;
+}
+/*--ventana modal--*/
+.modal-plan{
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+/*--Contenido de la ventana modal--*/
+.contenido-plan{
+    position: absolute;
+    background-color: rgb(255, 166, 0);
+    width: 700px;
+    height: 350px;
+    border-radius: 20px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15% auto;
+}
+/*--Titulo de la ventana modal--*/
+.titulo-plan-cabeza{
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+/*--Mensaje de promocion de la ventana modal--*/
+.promo{
+    color: red;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 5px;
+}
+/*--Contenedor de los detalles del plan--*/
+.caja-tipo-precio-horario-plan{
+    display: flex;
+    gap: 15px;
+}
+/*--Contenedor para cada apartado--*/
+.caja-tipo-precio-horario{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+/*--Titulo para los tres apartados--*/
+.caja-tipo-precio-horario h3{
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    text-align: center;
+}
+/*--Estilo para los tres apartados--*/
+.caja-tipo-precio-horario p, .caja-tipo-precio-horario h2{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*--Estilo para los detalles costo y horario--*/
+.caja-tipo-precio-horario p{
+    color: rgb(0, 0, 0);
+}
+/*--Estilo para el detalle tipo de plan--*/
+.caja-tipo-precio-horario h2{
+    color: rgb(255, 0, 0);
+}
+/*--Contenedor del boton cerrar modal--*/
+.caja-boton-cerrar-plan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+/*--Boton cerrar modal--*/
+.boton-cerrar-plan{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s ease;
+}
+/*--Animacion del boton cerrar modal--*/
+.boton-cerrar-plan:hover{
+    transform: scale(1.1);
+}
+/*--Estilo para "x" para cerrar modal--*/
+.cerrar-plan{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+/*--Contenedor de textarea para ingresar mensaje--*/
+.mensaje textarea{
+    width: 70%;
+    height: 70px;
+    font-size: 0.9rem;
+    padding: 5px;
+    display: flex;
+    text-align: center;
+    background-color: rgba(131, 131, 131, 0.2);
+    color: rgb(255, 255, 255);
+    font-family: 'Bebas Neue', sans-serif;
+}
+/*--Contenedor del boton enviar--*/
+.enviar{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*--Boton enviar--*/
+input[type="submit"]{
+    width: 60%;
+    background-color: rgb(255, 166, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+/*--Animacion del boton enviar--*/
+input[type="submit"]:hover{
+    transform: scale(1.05);
+    background-color: rgb(255, 181, 44);
+}
+/*-----------------------------Seccion Perfil-----------------------------*/
+/*--Contenedor de la imagen--*/
+.imagen-perfil{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*--Imagen del perfil--*/
+.imagen-perfil img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 166, 0);
+}
+/*--Contenedor de la descripcion--*/
+.descripcion-perfil{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+/*--Descripcion del perfil--*/
+.descripcion-perfil h3{
+    line-height: 35px;
+    color: rgb(255, 255, 255);
+}
+/*-----------------------------Footer-----------------------------*/
+/*--Espacio interno para todos los contenedores del footer--*/
+footer{
+    padding: 3rem 4rem 1.5rem;
+}
+/*--Contenedor de la primera fila del footer--*/
+.footer-grid{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+/*--Descripcion del footer debajo del logo--*/
+.parrafo-footer{
+    color: rgb(201, 201, 201);
+    font-size: 0.82rem;
+    line-height: 1.7;
+    margin-top: 0.8rem;
+    max-width: 220px;
+}
+/*--Titulo del footer--*/
+.footer-columna h4{
+    color: rgb(255, 166, 0);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+/*--Contenedor de los enlaces de la primera fila del footer--*/
+.footer-links{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+/*--Enlaces de la primera fila del footer--*/
+.footer-links a{
+    color: rgb(201, 201, 201);
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: color 0.3s;
+}
+/*--Animacion de los enlaces de la primera fila del footer--*/
+.footer-links a:hover{
+    color: rgb(255, 181, 44);
+}
+/*--Contenedor de la segunda fila del footer--*/
+.footer-pie{
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgb(255, 166, 0);
+    font-size: 0.75rem;
+    color: rgb(201, 201, 201);
+}
+/*--Contenedor de los enlaces de la segunda fila del footer--*/
+.footer-pie-links{
+    display: flex;
+    gap: 1.2rem;
+    margin-left: 20px;
+}
+/*--Enlaces de la segunda fila del footer--*/
+.footer-pie-links a{
+    color: rgb(201, 201, 201);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+/*--Animacion de los enlaces de la segunda fila del footer--*/
+.footer-pie-links a:hover{
+    color: rgb(255, 181, 44);
+}
+@media(max-width: 600px){
+    .whatsapp a{
+        font-size: 0;
+        flex-direction: column;
+    }
+    .whatsapp img{
+        margin-right: 0;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        width: 100%;
+        gap: 20px;
+        padding: 10px;
+    }
+    .logo{
+        font-size: 1.4rem;
+    }
+    .logo img{
+        width: 30px;
+        height: 30px;
+    }
+    .logo p{
+        letter-spacing: 2px;
+        padding: 5px 10px;
+    }
+    .inscribirse{
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        font-size: 0.93rem;
+        padding: 10px 10px;
+    }
+    .modo{
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+    }
+    .modo img{
+        width: 40px;
+        height: 40px;
+    }
+    .nav-links{
+        grid-column: 1 / span 3;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 2px;
+        width: 100%;
+    }
+    .imagen-fondo{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .imagen-fondo img{
+        width: 100%;
+        height: auto;
+        margin-top: 70px;
+    }
+    .contenido-superpuesto{
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 8%;
+        padding-top: 5%;
+        text-align: left;
+    }
+    .titulo-izquierdo{
+        font-size: 0.85rem;
+        margin-left: -20px;
+    }
+    .sub-titulo-izquierdo, .sub-titulo-izquierdo-2{
+        margin-top: 0.5px;
+        width: 50%;
+        font-size: 0.85rem;
+    }
+    .botones{
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 15px;
+    }
+    .btn-unete, .btn-saberMas{
+        font-size: 0.80rem;
+        padding: 4px 6px ;
+        width: auto;
+    }
+}
+
+/*-----------------------------Modo oscuro/claro-----------------------------*/
+body.dark{
+    background-color: rgb(231, 231, 231);
+    color: rgb(17, 20, 25);
+}
+body.dark::-webkit-scrollbar-track{
+    background: rgb(228, 228, 228);
+}
+body.dark nav{
+    background-color: rgba(228, 228, 228, 0.8);
+    border-bottom: 2px solid rgba(255, 166, 0, 1);
+}
+body.dark .logo{
+    color: rgb(255, 150, 0);
+    text-shadow: 0 0 1px rgb(17, 20, 25);
+}
+body.dark .nav-links a{
+    color: rgb(0, 0, 0);
+}
+body.dark .nav-links a:hover, body.dark .nav-links a.active{
+    color: rgb(255, 111, 0);
+}
+body.dark section{
+    border-bottom: 1px solid rgb(17, 20, 25);
+}
+body.dark section::before{
+    left: 0;
+    background: linear-gradient(to right, rgba(69, 69, 69, 0.7), transparent);
+}
+body.dark section::after{
+    right: 0;
+    background: linear-gradient(to left, rgba(69, 69, 69, 0.7), transparent);
+}
+body.dark .titulo-programa{
+    color: rgb(17, 20, 25);
+    text-shadow: 0 0 10px rgb(17, 20, 25);
+}
+body.dark .parrafo-programa{
+    color: rgb(215, 140, 0);
+    text-shadow: 0 0 1px rgb(17, 20, 25);
+}
+body.dark .programa-tarjeta{
+    box-shadow: 0 0 10px rgba(0, 0, 0 , 1);
+    background-color: rgb(17, 20, 25);
+    border: 3px solid rgba(17, 20, 25, 0.9);
+}
+body.dark .programa-tarjeta:hover{
+    border: 3px solid rgb(255, 166, 0);
+}
+body.dark .programa-descripcion{
+    background-color: rgb(17, 20, 25);
+    text-shadow: 0 0 1px rgb(228, 228, 228);
+    color: rgb(228, 228, 228);
+}
+body.dark .titulo-preguntas{
+    color: rgb(17, 20, 25);
+    text-shadow: 0 0 10px rgb(17, 20, 25);
+}
+body.dark .parrafo-preguntas{
+    color: rgb(215, 140, 0);
+    text-shadow: 0 0 1px rgb(17, 20, 25);
+}
+body.dark .imagen{
+    border: 2px solid rgb(215, 140, 0);
+}
+body.dark details.item{
+    border: 2px solid rgb(17, 20, 25);
+}
+body.dark details.item:hover{
+    border-color: rgb(215, 140, 0);
+}
+body.dark details[open].item{
+    border-color: rgb(255, 140, 0);
+}
+body.dark .pregunta-detalles{
+    color: rgb(215, 140, 0);
+}
+body.dark details.item summary::after{
+    color: rgb(215, 140, 0);
+}
+body.dark details.item summary{
+    color: rgb(17, 20, 25);
+}
+body.dark .pregunta-detalles{
+    color: rgb(17, 20, 25);
+}
+body.dark .titulo-precios{
+    color: rgb(17, 20, 25);
+    text-shadow: 0 0 10px rgb(17, 20, 25);
+}
+body.dark .parrafo-precios{
+    color: rgb(215, 140, 0);
+    text-shadow: 0 0 1px rgb(17, 20, 25);
+}
+body.dark .plan-tarjeta{
+    background-color: rgba(17, 20, 25, 0.7);
+    border: 2px solid rgb(215, 140, 0);
+}
+body.dark .plan-tarjeta:hover{
+    background-color: rgba(55, 55, 55, 0.7);
+}
+body.dark .titulo-contacto{
+    color: rgb(17, 20, 25);
+    text-shadow: 0 0 10px rgb(17, 20, 25);
+}
+body.dark .parrafo-contacto{
+    color: rgb(215, 140, 0);
+    text-shadow: 0 0 1px rgb(17, 20, 25);
+}
+body.dark .descripcion-contacto{
+    color: rgb(17, 20, 25);
+}
+body.dark .nombreUsuario, body.dark .correoUsuario, body.dark .planUsuario, body.dark .titulo-combo, body.dark .mensajeUsuario{
+    color: rgb(255, 111, 0);
+}
+body.dark .nombre input, body.dark .correo input{
+    background-color: rgba(73, 73, 73, 0.2);
+    color: rgb(17, 20, 25);
+}
+body.dark .contenedor-boton-ver-plan{
+    border-top: 2px solid rgb(255, 111, 0);
+}
+body.dark .opciones-combo{
+    background-color: rgba(73, 73, 73, 0.2);
+    color: rgb(17, 20, 25);
+}
+body.dark .opcionesPlan button{
+    background-color: rgb(0, 0, 0);
+    color: rgb(254, 254, 254);
+}
+body.dark .mensaje textarea{
+    background-color: rgba(73, 73, 73, 0.2);
+    color: rgb(17, 20, 25);
+}
+body.dark .descripcion-perfil h3{
+    color: rgb(0, 0, 0);
+}
+body.dark .parrafo-footer{
+    color: rgb(17, 20, 25);
+}
+body.dark .footer-columna h4{
+    color: rgb(255, 111, 0);
+}
+body.dark .footer-links a{
+    color: rgb(17, 20, 25);
+}
+body.dark .footer-links a:hover{
+    color: rgb(255, 111, 0);
+}
+body.dark .footer-pie{
+    border-top: 1px solid rgb(17, 20, 25);
+    color: rgb(17, 20, 25);
+}
+body.dark .footer-pie-links a{
+    color: rgb(17, 20, 25);
+}
+body.dark .footer-pie-links a:hover{
+    color: rgb(255, 111, 0);
+}
+body.dark footer{
+    background-color: rgb(228, 228, 228);
+}

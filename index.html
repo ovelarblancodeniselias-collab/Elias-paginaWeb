@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>GENESE GYM</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="img/pesa.png" alt="">
+                <p>GENESE GYM</p>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#programas">Programas</a></li>
+                <li><a href="#preguntas">Sobre Nosotros</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li></li>
+            </ul>
+            <a href="#contacto" class="inscribirse">¡Incríbete ya!</a>
+            <button class="modo" onclick="cambiarModo()">
+                <img src="img/claro.png" alt="" id="modo-claro-oscuro">
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section id="contenedor-titulos">
+            <div class="imagen-fondo">
+                <img src="img/imagen1.jpg" alt="">
+                <div class="contenido-superpuesto">
+                    <div class="contenedor-titulo-izquierdo">
+                        <h1 class="titulo-izquierdo">⚡ MEJOR CENTRO FITNESS</h1>
+                        <p class="sub-titulo-izquierdo">Con <strong>GENESE GYM</strong> tu físico realmente 
+                        se transformará y se verá bien.</p>
+                        <p class="sub-titulo-izquierdo-2">¿Interesado? ¡Únete ahora!</p>
+                        <div class="botones">
+                            <a href="#contacto" class="btn-unete">Únete</a>
+                            <a href="#preguntas" class="btn-saberMas">Saber Más</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <section id="programas">
+            <p class="titulo-programa">Nuestros Programas</p>
+            <h2 class="parrafo-programa">Construye un cuerpo increíble</h2>
+            <div class="programas-grid-1">
+                <div class="programa-tarjeta">
+                    <div class="programa-imagen">
+                        <img src="img/abdominales.jpg" alt="">
+                    </div>
+                    <div class="titulo-descripcion">
+                        <p class="programa-titulo">ABDOMINALES</p>
+                        <p class="programa-descripcion">Pensadas para todos los niveles de los alumnos.
+                        Es una clase intensa y focalizada en la zona media del cuerpo, que condiciona
+                        gran parte de nuestros movimientos.
+                        </p> 
+                    </div>
+                </div>
+                <div class="programa-tarjeta">
+                    <div class="programa-imagen">
+                        <img src="img/fitDance.png" alt="">
+                    </div>
+                    <div class="titulo-descripcion">
+                        <p class="programa-titulo">FIT DANCE</p>
+                        <p class="programa-descripcion">Ejercicios con movimientos simples, en donde en cada
+                        clase estimularás la coordinación al ritmo de la música, combinando con ejercicios
+                        aeróbicos que ayudan a fortalecer tus brazos, piernas, glúteos y abdominales.
+                        </p>
+                    </div>
+                </div>
+                <div class="programa-tarjeta">
+                    <div class="programa-imagen">
+                        <img src="img/GAP.jpg" alt="">
+                    </div>
+                    <div class="titulo-descripcion">
+                        <p class="programa-titulo">ENTRENAMIENTO GAP</p>
+                        <p class="programa-descripcion">Entrenamiento enfocado en glúteos, abdomen y piernas con
+                        una serie de circuitos guiadas por un profesional, con ésta clase optimizarás tu 
+                        entrenamiento llevándote al siguiente nivel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="programas-grid-2">
+                <div class="programa-tarjeta">
+                    <div class="programa-imagen">
+                        <img src="img/bike.jpg" alt="">
+                    </div>
+                    <div class="titulo-descripcion">
+                        <p class="programa-titulo">ENTRENAMIENTO BIKE</p>
+                        <p class="programa-descripcion">Perfecta para quienes buscan una explosión de energía y
+                        diversión durante su entrenamiento, ENTRENAMIENTO BIKE ofrece la combinación 
+                        perfecta de intensidad y entretenimiento.
+                        </p>
+                    </div>
+                </div>
+                <div class="programa-tarjeta">
+                    <div class="programa-imagen">
+                        <img src="img/HIIT.jpg" alt="">
+                    </div>
+                    <div class="titulo-descripcion">
+                        <p class="programa-titulo">HIIT POTENCIADO</p>
+                        <p class="programa-descripcion">Con ésta secuencia de ejercicios vas a poder mejorar 
+                        tu condición física y bajar de peso, la característica principal es llevarte a un 
+                        entrenamiento de alta instensidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="preguntas">
+            <div class="seccion-preguntas">
+                <div class="imagenes">
+                    <div class="imagen">
+                        <img src="img/baner1.jpg" alt="" class="img">
+                    </div>
+                    <div class="imagen">
+                        <img src="img/baner2.jpg" alt="" class="img">
+                    </div>
+                    <div class="imagen">
+                        <img src="img/baner3.jpg" alt="" class="img">
+                    </div>
+                </div>
+                <div class="preguntas">
+                    <p class="titulo-preguntas">Sobre nosotros</p>
+                    <h2 class="parrafo-preguntas">
+                    ¿Por qué unirte?</h2>
+                    <ul class="preguntas-listas">
+                        <li>
+                            <details class="item">
+                                <summary class="item-izquierdo">
+                                    <div class="item-icono">
+                                        <img src="img/instalaciones.png" alt="">
+                                    </div>
+                                    Excelentes instalaciones
+                                </summary>
+                                <p class="pregunta-detalles">Contamos con equipos de última generación
+                                y espacios amplios diseñados para que entrenes con comodidad y 
+                                seguridad.</p>
+                            </details>
+                        </li>
+                        <li>
+                            <details class="item">
+                                <summary class="item-izquierdo">
+                                    <div class="item-icono">
+                                        <img src="img/coach.png" alt="">
+                                    </div>
+                                    Coaches expertos
+                                </summary>
+                                <p class="pregunta-detalles">Nuestros entrenadores están certificados 
+                                y listos para guiarte en cada paso de tu transformación física.</p>
+                            </details>
+                        </li>
+                        <li>
+                            <details class="item">
+                                <summary class="item-izquierdo">
+                                    <div class="item-icono">
+                                        <img src="img/consultoria.png" alt="">
+                                    </div>
+                                    Consultoría personalizada
+                                </summary>
+                                <p class="pregunta-detalles">Te ofrecemos sesiones de consulta con
+                                especialistas para diseñar un plan de entrenamiento adaptado
+                                a tus metas.</p>
+                            </details>
+                        </li>
+                        <li>
+                            <details class="item">
+                                <summary class="item-izquierdo">
+                                    <div class="item-icono">
+                                        <img src="img/gimnasio.png" alt="">
+                                    </div>
+                                    El mejor gimnasio
+                                </summary>
+                                <p class="pregunta-detalles">Reconocidos por nuestra comunidad como el 
+                                gimnasio #1 en ambiente, resultados y atención al cliente.</p>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="precios">
+            <p class="titulo-precios">Precios</p>
+            <h2 class="parrafo-precios">Nuestros planes especiales</h2>
+            <div class="planes-grid">
+                <div class="plan-tarjeta">
+                    <p class="plan-tipo"> 🥇 Basic</p>
+                    <p class="plan-precio"><span>Gs.  </span>150.000/mes</p>
+                    <ul class="plan-caracteristicas">
+                        <li class="plan-caracteristica">✅ Área de peso libre, peso integrado, cardio y 
+                        clases grupales</li>
+                        <li class="plan-caracteristica">✅ Entrená desde donde estés</li>
+                        <li class="plan-caracteristica">✅ Acesso al programa ABDOMINALES</li>
+                        <li class="plan-caracteristica">✅ Acceso al programa FIT DANCE</li>
+                    </ul>
+                    <a href="#contacto" class="plan-btn">¡Inscríbite ya!</a>
+                </div>
+                <div class="plan-tarjeta">
+                    <p class="plan-tipo"> 🏅 Premium</p>
+                    <p class="plan-precio"><span>Gs.  </span>250.000/mes</p>
+                    <ul class="plan-caracteristicas">
+                        <li class="plan-caracteristica">✅ Área de peso libre, peso integrado, cardio y 
+                        clases grupales</li>
+                        <li class="plan-caracteristica">✅ Entrená desde donde estés</li>
+                        <li class="plan-caracteristica">✅ Acceso a sillones de masaje</li>
+                        <li class="plan-caracteristica">✅ Acesso al programa ABDOMINALES</li>
+                        <li class="plan-caracteristica">✅ Acceso al programa FIT DANCE</li>
+                        <li class="plan-caracteristica">✅ Acceso al programa ENTRENAMIENTO GAP</li>
+                        <li class="plan-caracteristica">✅ Acceso al programa ENTRENAMIENTO BIKE</li>
+                    </ul>
+                    <a href="#contacto" class="plan-btn">¡Inscríbite ya!</a>
+                </div>
+                <div class="plan-tarjeta">
+                    <p class="plan-tipo"> 🏆 Platino</p>
+                    <p class="plan-precio"><span>Gs.  </span>350.000/mes</p>
+                    <ul class="plan-caracteristicas">
+                        <li class="plan-caracteristica">✅ Área de peso libre, peso integrado, cardio y 
+                        clases grupales</li>
+                        <li class="plan-caracteristica">✅ Entrená desde donde estés</li>
+                        <li class="plan-caracteristica">✅ Acceso a sillones de masaje</li>
+                        <li class="plan-caracteristica">✅ Acesso al programa ABDOMINALES</li>
+                        <li class="plan-caracteristica">✅ Acceso al programa FIT DANCE</li>
+                        <li class="plan-caracteristica">✅ Acceso al programa ENTRENAMIENTO GAP</li>
+                        <li class="plan-caracteristica">✅ Acceso al programa ENTRENAMIENTO BIKE</li>
+                        <li class="plan-caracteristica">✅ Acceso al programa HIIT POTENCIADO</li>
+                        <li class="plan-caracteristica">✅ Invitá a tus amigos a entrenar</li>
+                    </ul>
+                    <a href="#contacto" class="plan-btn">¡Inscríbite ya!</a>
+                </div>
+            </div>
+        </section>
+        <section id="contacto">
+            <div class="seccion-contacto">
+                <div class="contacto-img">
+                    <img src="img/contacto.jpeg" alt="">
+                </div>
+                <div class="contacto-contenedor">
+                    <p class="titulo-contacto">Contacto</p>
+                    <h2 class="parrafo-contacto">¿Tienes alguna pregunta?</h2>
+                    <p class="descripcion-contacto">GENESE GYM ofrece servicios para satisfacer tus gustos. ¡Escribe tu correo aquí, 
+                    pide tu PLAN y obtén una promoción interesante hoy mismo!</p>
+                    <form id="formCorreo">
+                        <div class="nombre">
+                            <label class="nombreUsuario">Nombre (no se permite números ni caracteres especiales):</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" maxlength="30" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{1,30}" required>
+                        </div>
+                        <div class="correo">
+                            <label class="correoUsuario">Correo:</label>
+                            <input type="email" name="correo" id="correo" placeholder="Ingresa tu correo electrónico" required>
+                        </div>
+                        <div class="opcionesPlan">
+                            <label class="planUsuario">Seleccione su Plan:</label>
+                            <br>
+                            <div class="grupo-radios">
+                                <label><input type="radio" name="plan" id="rbnBasic" required> Plan BASIC</label>
+                                <label><input type="radio" name="plan" id="rbnPlatino"> Plan PLATINO</label>
+                                <label><input type="radio" name="plan" id="rbnPremium"> Plan PREMIUM</label>
+                            </div>
+                            <div class="grupo-combo">
+                                <label class="titulo-combo">Seleccione su Horario:</label>
+                                <br>
+                                <select id="horarios" class="opciones-combo" required>
+                                    <option value="">Elije un turno</option>
+                                    <option value="mañana">Turno Mañana: 5am a 11am</option>
+                                    <option value="tarde">Turno Tarde: 1pm a 7pm</option>
+                                    <option value="noche">Turno Noche: 8pm a 11pm</option>
+                                </select>
+                            </div>
+                            <div class="contenedor-boton-ver-plan">
+                                <button type="button" class="boton-ver-plan" onclick="verPlan()">Ver Plan</button>
+                            </div>
+                            <div id="modal-plan" class="modal-plan">
+                                <div class="contenido-plan">
+                                    <span class="cerrar-plan">&times;</span>
+                                    <h1 class="titulo-plan-cabeza">Detalles de tu Plan</h1>
+                                    <h3 class="promo">30% de descuento del 1 al 10 de cada mes. Aprovechala!!</h3>
+                                    <div class="caja-tipo-precio-horario-plan">
+                                        <div class="caja-tipo-precio-horario">
+                                            <h3 class="tipo-plan">Tipo de Plan</h3><br>
+                                            <h2 class="titulo-plan"></h2>
+                                        </div>
+                                        <div class="caja-tipo-precio-horario">
+                                            <h3 class="costo-plan">Costo del Plan</h3><br>
+                                            <p class="parrafo-plan"></p>
+                                        </div>
+                                        <div class="caja-tipo-precio-horario">
+                                            <h3 class="horario-plan">Horario</h3><br>
+                                            <p class="horario-plan"></p>
+                                        </div>
+                                    </div>
+                                    <div class="caja-boton-cerrar-plan">
+                                        <button type="button" class="boton-cerrar-plan">Aceptar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mensaje">
+                            <label class="mensajeUsuario">Atención a Consultas, Quejas y Sugerencias:</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta, queja o sugerencia" required></textarea>
+                        </div>
+                        <div class="enviar">
+                            <input type="submit" id="button" value="Enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="perfil">
+            <div class="imagen-perfil">
+                <img src="img/perfil.jpeg" alt="">
+            </div>
+            <div class="descripcion-perfil">
+                <h3>Elias Ovelar</h3>
+                <h3>Estudiante de Ingeniería informática</h3>
+                <h3>3er año Turno Tarde</h3>
+                <h3>2026</h3>
+            </div>
+        </section>
+        <div class="whatsapp">
+            <a href="https://wa.me/595986666768" target="_blank">
+                <img src="img/whatsapp.png" alt="WhatsApp"><span>WhatsApp</span>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-izquierdo">
+                <a href="index.html" class="logo">
+                    <img src="img/pesa.png" alt="">
+                    <p>GENESE GYM</p>
+                </a>
+                <p class="parrafo-footer">Con GENESE GYM, tu fisico realmente se transforma y lucirá increíble. ¡Únete ahora!</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Acceso Rápido</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#programas">Programas</a></li>
+                    <li><a href="#preguntas">Sobre Nosotros</a></li>
+                    <li><a href="#precios">Precios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h4>Servicios</h4>
+                <ul class="footer-links">
+                    <li><a href="#contacto">Centro de Ayuda</a></li>
+                    <li><a href="#preguntas">Entrenamiento Personal</a></li>
+                    <li><a href="#programas">Programa de Ejercicios</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h4>Contactos</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-pie">
+            <p>Copyright © 2026</p>
+            <div class="footer-pie-links">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Políticas de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">emailjs.init('fOfb1GaZisa-SidAm')</script>
+</body>
+</html>
