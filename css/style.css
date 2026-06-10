@@ -999,7 +999,7 @@ footer{
 .footer-pie-links a:hover{
     color: rgb(255, 181, 44);
 }
-@media(max-width: 600px){
+@media(max-width: 500px){
     .whatsapp a{
         font-size: 0;
         flex-direction: column;
@@ -1058,7 +1058,7 @@ footer{
     .imagen-fondo img{
         width: 100%;
         height: auto;
-        margin-top: 70px;
+        margin-top: 90px;
     }
     .contenido-superpuesto{
         justify-content: flex-start;
@@ -1086,8 +1086,120 @@ footer{
         padding: 4px 6px ;
         width: auto;
     }
+    .programas-grid-1, .programas-grid-2{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+    }
+    .programa-tarjeta{
+        width: 90%;
+        height: 90%;
+        max-width: 350px;
+    }
+    .programa-imagen img{
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .titulo-descripcion{
+        position: relative;
+        top: auto;
+        margin-top: -5px;
+    }
+    .seccion-preguntas{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100%;
+    }
+    .imagenes{
+        display: none;
+    }
+    .preguntas{
+        width: 100%;
+    }
+    .preguntas-listas{
+        width: 100%;
+    }
+    details.item{
+        width: 100%;
+    }
+    .titulo-preguntas, .parrafo-preguntas{
+        text-align: center;
+        width: 100%;
+    }
+    .planes-grid{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100%;
+        max-width: 100%;
+    }
+    .plan-tarjeta{
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 4rem;
+    }
+    .plan-btn{
+        position: relative;
+        bottom: auto;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .titulo-precios, .parrafo-precios{
+        text-align: center;
+        width: 100%;
+    }
+    .seccion-contacto{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .contacto-img{
+        width: 90%;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+    .contacto-img img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .contacto-contenedor{
+        width: 90%;
+        text-align: center;
+    }
+    .titulo-contacto, .parrafo-contacto, .descripcion-contacto{
+        text-align: center;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nombre input, .correo input, .opciones-combo, .mensaje textarea, .enviar {
+        width: 100%;
+    }
+    .contenedor-boton-ver-plan{
+        width: 100%;
+    }
+    .boton-ver-plan{
+        width: 60%;
+    }
+    input[type="submit"]{
+        width: 80%;
+    }
+    .footer-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .footer-izquierdo, .footer-columna {
+        text-align: center;
+    }
+    .parrafo-footer{
+        max-width: none;
+        margin: 0 auto;
+    }
 }
-
 /*-----------------------------Modo oscuro/claro-----------------------------*/
 body.dark{
     background-color: rgb(231, 231, 231);
