@@ -191,7 +191,7 @@ section::after{
 .imagen-fondo img{
     width: 100%;
     height: auto;
-    display: block;
+    display: flex;
     margin-top: 40px;
     border-radius: 30px;
 }
@@ -1052,15 +1052,17 @@ footer{
         width: 100%;
     }
     .imagen-fondo{
-        width: 100%;
-        margin: 0 auto;
+        width: 110%;
+        margin-left: -15px;
     }
     .imagen-fondo img{
+        margin-top: 100px;
         width: 100%;
         height: auto;
-        margin-top: 90px;
+        object-fit: cover;
     }
     .contenido-superpuesto{
+        width: 100%;
         justify-content: flex-start;
         align-items: flex-start;
         padding-left: 8%;
@@ -1187,6 +1189,19 @@ footer{
     }
     input[type="submit"]{
         width: 80%;
+    }
+    .imagen-perfil{
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .descripcion-perfil{
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .descripcion-perfil h3{
+        font-size: 1rem;
+        line-height: 28px;
     }
     .footer-grid{
         grid-template-columns: 1fr 1fr;
